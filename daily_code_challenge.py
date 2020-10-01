@@ -17,13 +17,29 @@ def solve_input(inputList, k):
             y = inputList[j]
             if k == (x + y):
                 print(x, y, ' result is ', k)
-                return True
+                return (True, counter)
     print('counter:  ', counter)
     return False
 
 
-arr = [10, 15, 3, 7, 2, 3, 41, 2]
-sum_k = 33
+def solve_OneIteration(inputList, k):
+    arr_new = []*len(inputList)
+    for i in range(len(inputList)):
+        arr_new.append(abs(inputList[i]-k))
+    print(arr_new)
+    result = list(set(inputList).intersection(arr_new))
+    print(result)
+    if (len(result) > 0):
+        print(result[0], '+', result[1], ' is ', sum_k)
+        return True
+    else:
+        print('No combination matches')
+        return False
+
+
+arr = [10, 15, 3, 7, 70, 6, 2, 73, 41, 2]
+sum_k = 76
 result_found = 0
 
 print(solve_input(arr, sum_k))
+print(solve_OneIteration(arr, sum_k))
