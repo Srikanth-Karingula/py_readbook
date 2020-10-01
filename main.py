@@ -1,4 +1,3 @@
-import null as null
 import pyttsx3
 import PyPDF2
 
