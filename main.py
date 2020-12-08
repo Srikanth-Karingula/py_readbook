@@ -9,7 +9,7 @@ pdfObj = PyPDF2.PdfFileReader(book)
 # no. of pages
 pageCount = pdfObj.numPages
 reader = pyttsx3.init()
-pageCount = 0
+# pageCount = 0
 total_calls = 0
 
 def read_page(currentPage):
@@ -41,8 +41,8 @@ def fib_memoize(n):
         return mem_list[n]
 
 
-print(fib_rec(10))
-print(fib_memoize(10))
+# print(fib_rec(10))
+# print(fib_memoize(10))
 
 if pageCount > 1:
     print("%s contains %s pages " % (bookName, pageCount))
